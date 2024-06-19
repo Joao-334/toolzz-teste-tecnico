@@ -8,16 +8,15 @@
   --terciary-gray: #555555;
   --disabled-color: #222222;
   --blue: #0761e2;
-  --icon-input-color: #585858;
-  --checkbox-border-color: #6A6A6A;
+  --checkbox-border-color: #6a6a6a;
 }
 
 [data-theme="dark"] {
   --primary-color: #fff;
   --secondary-color: #232323;
-  --text-color-secondary: #EDEDED;
+  --text-color-secondary: #ededed;
   --moon-background: var(--primary-color);
   --moon-color: var(--secondary-color);
-  --icon-input-color: #909090;
-  --checkbox-border-color: #5C5C5C;
+  --checkbox-border-color: #5c5c5c;
+  --gray: #909090;
 }

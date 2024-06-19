@@ -3,12 +3,23 @@
 .paragraph {
   text-align: center;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: .75em;
   color: var(--primary-color);
+
+  @media (max-width: 769px) {
+    color: var(--gray);
+    font-weight: bold;
+    margin-top: .5em;
+  }
 
   .span {
     color: var(--blue);
     cursor: pointer;
+
+    @media (max-width: 769px) {
+      color: var(--primary-color);
+      font-weight: bold;
+    }
   }
 }

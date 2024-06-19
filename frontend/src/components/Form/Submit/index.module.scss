@@ -6,7 +6,11 @@
 
   .icon {
     position: relative;
-    left: 190px;
+    left: 180px;
+
+    @media (max-width: 769px) {
+      display: none;
+    }
   }
 
   .btn__login {
@@ -19,6 +23,10 @@
     color: var(--text-color);
     font-weight: 500;
 
+    @media (max-width: 769px) {
+      width: 85%;
+      margin-left: 2em;
+      padding: 1em;
+    }
   }
-  
 }

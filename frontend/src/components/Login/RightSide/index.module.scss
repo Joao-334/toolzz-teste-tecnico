@@ -10,6 +10,7 @@
   @media (max-width: 769px) {
     width: 100%;
     margin: 0;
+    height: 100vh;
   }
 
   /* Mobile */
@@ -23,7 +24,7 @@
       justify-content: space-between;
       border-bottom: 1px solid #0000001a;
       width: 100%;
-      height: 72px;
+      height: 60px;
 
       &_arrow {
         display: flex;
@@ -31,7 +32,7 @@
         border-radius: 1em;
         border: 1px solid var(--primary-color);
         margin-left: 1em;
-        padding: .5em;
+        padding: 0.5em;
         cursor: pointer;
 
         .icon {
@@ -44,6 +45,7 @@
         font-size: 16px;
         font-weight: 500;
         line-height: 25px;
+        color: var(--primary-color);
       }
     }
   }
@@ -68,6 +70,15 @@
         color: var(--primary-color);
         font-size: 18px;
         font-weight: 500;
+      }
+
+      @media (max-width: 769px) {
+        margin-left: 1.5em;
+        margin-top: 1em;
+
+        p {
+          font-size: 20px;
+        }
       }
     }
 
@@ -107,6 +118,18 @@
         margin-top: 1em;
         color: var(--gray);
       }
+
+      @media (max-width: 769px) {
+        margin-left: 1.5em;
+        .title {
+          font-size: 18px;
+        }
+
+        .paragraph {
+          margin-top: 0.5em;
+          font-size: 16px;
+        }
+      }
     }
 
     .options {
@@ -115,6 +138,11 @@
       align-items: center;
       justify-content: space-around;
       margin-top: 2em;
+
+      @media (max-width: 769px) {
+        gap: 0;
+        justify-content: space-evenly;
+      }
 
       .box {
         align-content: center;
@@ -125,6 +153,25 @@
         height: 40px;
         cursor: pointer;
 
+        &.responsive {
+          @media (max-width: 769px) {
+            border-color: var(--checkbox-border-color);
+          }
+        }
+
+        @media (max-width: 769px) {
+          cursor: none;
+          width: 70px;
+        }
+
+        .google {
+          display: none;
+
+          @media (max-width: 769px) {
+            display: inline;
+          }
+        }
+
         span {
           font-size: 10px;
           font-weight: bolder;
@@ -132,6 +179,10 @@
           color: var(--primary-color);
           border-radius: 0.4em;
           padding: 0.05em;
+
+          @media (max-width: 769px) {
+            display: none;
+          }
         }
 
         .icon {
@@ -145,18 +196,32 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      gap: 1em;
+
+      @media (max-width: 769px) {
+        gap: 0;
+        justify-content: space-evenly;
+      }
+
       .bar {
         width: 271px;
         height: 1px;
         background-color: var(--gray);
         opacity: 0.5;
+
+        @media (max-width: 769px) {
+          width: 153px;
+          opacity: 0.2;
+        }
       }
 
       .text {
         color: var(--gray);
         font-weight: 500;
         font-size: 14px;
+
+        @media (max-width: 769px) {
+          text-transform: uppercase;
+        }
       }
     }
   }

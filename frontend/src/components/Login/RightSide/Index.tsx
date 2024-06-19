@@ -3,11 +3,14 @@ import LoginForm from "../../Form/Login/Index";
 import styles from "./index.module.scss";
 import Logo from "../../../assets/images/logo.png";
 
-import { IoLogoFacebook, IoLogoApple, IoLogoTwitter } from "react-icons/io5";
-import { baseProps } from "../LeftSide/Index";
+import { IoLogoFacebook, IoLogoApple, IoLogoTwitter, IoLogoGoogle } from "react-icons/io5";
 import ArrowBack from "../../Icons/ArrowBack";
 
-const RightSide = ({ isDarkMode }: baseProps) => {
+type Props = {
+  isDarkMode: boolean;
+}
+
+const RightSide = ({ isDarkMode }: Props) => {
   return (
     <div
       className={styles.background}
@@ -44,10 +47,10 @@ const RightSide = ({ isDarkMode }: baseProps) => {
         </div>
         <div className={styles.options}>
           <div
-            className={styles.box}
+            className={`${styles.box} ${styles.responsive}`}
             data-theme={isDarkMode ? "dark" : "light"}
           >
-            <span>TZ</span>
+            <IoLogoGoogle className={`${styles.icon} ${styles.google}`}/><span>TZ</span>
           </div>
           <div
             className={styles.box}
@@ -62,7 +65,7 @@ const RightSide = ({ isDarkMode }: baseProps) => {
             <IoLogoApple className={styles.icon}></IoLogoApple>
           </div>
           <div
-            className={styles.box}
+            className={`${styles.box} ${styles.responsive}`}
             data-theme={isDarkMode ? "dark" : "light"}
           >
             <IoLogoTwitter className={styles.icon}></IoLogoTwitter>

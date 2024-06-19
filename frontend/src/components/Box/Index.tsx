@@ -6,20 +6,31 @@ type Props = {
   type: string;
   placeholder: string;
   name: string;
-  Icon: IconType
-}
+  Icon: IconType;
+  setAnything: React.Dispatch<React.SetStateAction<string>>;
+};
 
-const Box = ({ label, type = "text", placeholder, name, Icon }: Props) => {
+const Box = ({
+  label,
+  type = "text",
+  placeholder,
+  name,
+  Icon,
+  setAnything,
+}: Props) => {
   return (
     <div className={styles.box}>
-      <label className={styles.label}>{label}</label>
+      <label className={styles.label} htmlFor={name}>
+        {label}
+      </label>
       <div className={styles.input}>
         <Icon className={styles.icon} />
         <input
+          name={name}
+          onChange={(e) => setAnything(e.target.value)}
           className={styles.field}
           type={type}
           placeholder={placeholder}
-          name={name}
         />
       </div>
     </div>

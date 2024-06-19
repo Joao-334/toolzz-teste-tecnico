@@ -1,14 +1,29 @@
+/* eslint-disable @typescript-eslint/ban-types */
+import Checkbox from "../../Checkbox/Index";
 import ForgetPassword from "../../Link/ForgetPassword/Index";
 import styles from "./index.module.scss";
 import { FaArrowRightToBracket } from "react-icons/fa6";
 
-const Submit = ({ text = "Entrar" }) => {
+type Props = {
+  text: string;
+  isDarkMode: boolean;
+  procedLogin: Function;
+}
+
+const Submit = ({ text = "Entrar", isDarkMode, procedLogin }: Props) => {
+
   return (
     <>
       <div className={styles.submit}>
         <FaArrowRightToBracket className={styles.icon} />
-        <input type="submit" value={text} className={styles.btn__login} />
+        <button className={styles.btn__login} onClick={(e) => procedLogin(e)}>{text}</button>
       </div>
+      <Checkbox
+        checkboxName="holdConnection"
+        label="Manter conectado"
+        isDarkMode={isDarkMode}
+        responsiveDisplay={true}
+      />
       <ForgetPassword />
     </>
   );
