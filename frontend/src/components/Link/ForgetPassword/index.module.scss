@@ -1,0 +1,14 @@
+@import "../../../assets/css/colors.scss";
+
+.paragraph {
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  margin-top: .75em;
+  color: var(--primary-color);
+
+  .span {
+    color: var(--blue);
+    cursor: pointer;
+  }
+}

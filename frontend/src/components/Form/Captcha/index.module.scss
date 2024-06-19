@@ -1,0 +1,67 @@
+@import "../../../assets/css/colors.scss";
+
+.background {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 769px) {
+    display: none;
+  }
+
+  .captcha {
+    background-color: #fff;
+    display: flex;
+    margin-top: 1em;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    border: 1px solid var(--secondary-gray);
+    height: 65px;
+
+    .checkbox {
+      display: flex;
+      gap: 0.5em;
+      align-items: center;
+      margin-left: 0.5em;
+
+      .checkbox {
+        border: 1px solid var(--secondary-gray);
+        border-radius: 0.2em;
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+      }
+
+      .text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16.5px;
+        font-family: "Roboto", "Inter", sans-serif;
+        color: #555555;
+      }
+    }
+
+    .container__image {
+      display: flex;
+      flex-direction: column;
+      margin-right: 0.6em;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      .image {
+        width: 36%;
+        margin-right: .4em;
+      }
+
+      .text {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 16.5px;
+        font-family: "Roboto", "Inter", sans-serif;
+        color: var(--terciary-gray);
+      }
+    }
+  }
+}

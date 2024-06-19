@@ -13,13 +13,17 @@
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width:769px) {
+    display: none;
+  }
+
   /* Inicio da estilização dos icones de voltar e dark mode */
   &__icons {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    color: $white;
+    color: var(--text-color);
     margin: 4em;
     text-align: center;
 
@@ -27,7 +31,7 @@
     .icon__container_arrow {
       display: flex;
       align-items: center;
-      border: 1px solid $white;
+      border: 1px solid var(--text-color);
       border-radius: 1em;
       padding: 0.5em;
       cursor: pointer;
@@ -45,6 +49,9 @@
 
     .icon__container_moon {
       margin-right: 4em;
+      background: var(--moon-background);
+      color: var(--moon-color);
+      fill: var(--primary-color);
     }
   }
   /* Fim da estilização dos icones de voltar e dark mode */
@@ -55,7 +62,7 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
-    color: $white;
+    color: var(--text-color);
     font-weight: 300;
     margin: 4em;
 
@@ -64,7 +71,7 @@
       height: 32px;
       text-align: center;
       align-content: center;
-      background-color: $blue;
+      background-color: var(--blue);
       border-radius: 2em;
       font-size: 14px;
     }
@@ -79,7 +86,7 @@
       font-weight: 500;
       font-size: 16px;
       line-height: 20px;
-      color: $gray;
+      color: var(--gray);
     }
 
     /* CSS dos icones da parte inferior da landing page */
@@ -97,11 +104,11 @@
         .bar {
           width: 96px;
           height: 4px;
-          background-color: $disabled_color;
+          background-color: var(--disabled-color);
           cursor: pointer;
 
           &.enabled {
-            background-color: $white !important;
+            background-color: var(--text-color) !important;
           }
         }
       }
@@ -115,11 +122,11 @@
         .arrow {
           font-size: 32px;
           line-height: 32px;
-          color: $disabled_color;
+          color: var(--disabled-color);
           cursor: pointer;
 
           &.enabled {
-            color: $white;
+            color: var(--text-color);
           }
         }
       }
