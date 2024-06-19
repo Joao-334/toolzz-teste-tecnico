@@ -25,7 +25,7 @@
 
 cd backend
 
-composer update
+composer install # se não funcionar, use composer update
 
 php artisan serve
 
@@ -46,3 +46,10 @@ npm run dev
 <p stylee="text-align: center; font-size: 14px">/api/login - Esta rota recebe o usernam e o password informado pelo frontend e compara com um mock predefinido (conforme pedido pelo teste), se sua senha e usuario forem correspondentes, retorna autorizado com status 200, caso contrario, retorna falha com código 401 (Unauthorized)</p>
 
 <p stylee="text-align: center; font-size: 14px">O frontend recebe essa resposta, devolvendo ao usuário uma flash message de acordo com o retorno da API.</p>
+
+
+<h2>Deploy do Projeto:</h2>
+
+<p stylee="text-align: center; font-size: 14px">Segue o link da aplicação funcionando, não foi possivel fazer o deploy da API, portanto, a funcionalidade de login não estará funcionando devidamente na versão informada abaixo.</p>
+
+-  Link Da Página - [Aqui](https://toolzz-teste-tecnico.vercel.app)
