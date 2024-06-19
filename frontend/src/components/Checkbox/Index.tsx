@@ -7,7 +7,7 @@ type Props = {
   responsiveDisplay: boolean;
 };
 
-const Checkbox = ({
+const InputCheckbox = ({
   isDarkMode,
   checkboxName,
   label,
@@ -28,4 +28,4 @@ const Checkbox = ({
   );
 };
 
-export default Checkbox;
+export default InputCheckbox;

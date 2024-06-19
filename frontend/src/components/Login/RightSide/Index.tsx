@@ -1,14 +1,20 @@
-import LoginForm from "../../Form/Login/Index";
+import LoginForm from "../../Form/Index";
 
 import styles from "./index.module.scss";
 import Logo from "../../../assets/images/logo.png";
 
-import { IoLogoFacebook, IoLogoApple, IoLogoTwitter, IoLogoGoogle } from "react-icons/io5";
+import {
+  IoLogoFacebook,
+  IoLogoApple,
+  IoLogoTwitter,
+  IoLogoGoogle,
+} from "react-icons/io5";
 import ArrowBack from "../../Icons/ArrowBack";
+import Option from "../../Icons/Option";
 
 type Props = {
   isDarkMode: boolean;
-}
+};
 
 const RightSide = ({ isDarkMode }: Props) => {
   return (
@@ -46,30 +52,32 @@ const RightSide = ({ isDarkMode }: Props) => {
           </p>
         </div>
         <div className={styles.options}>
-          <div
-            className={`${styles.box} ${styles.responsive}`}
+          <Option
             data-theme={isDarkMode ? "dark" : "light"}
+            Icon={IoLogoGoogle}
+            divStyle={`${styles.box} ${styles.responsive}`}
+            iconStyle={`${styles.icon} ${styles.google}`}
           >
-            <IoLogoGoogle className={`${styles.icon} ${styles.google}`}/><span>TZ</span>
-          </div>
-          <div
-            className={styles.box}
+            <span>TZ</span>
+          </Option>
+          <Option
             data-theme={isDarkMode ? "dark" : "light"}
-          >
-            <IoLogoFacebook className={styles.icon}></IoLogoFacebook>
-          </div>
-          <div
-            className={styles.box}
+            divStyle={styles.box}
+            iconStyle={styles.icon}
+            Icon={IoLogoFacebook}
+          />
+          <Option
             data-theme={isDarkMode ? "dark" : "light"}
-          >
-            <IoLogoApple className={styles.icon}></IoLogoApple>
-          </div>
-          <div
-            className={`${styles.box} ${styles.responsive}`}
+            divStyle={styles.box}
+            iconStyle={styles.icon}
+            Icon={IoLogoApple}
+          />
+          <Option
             data-theme={isDarkMode ? "dark" : "light"}
-          >
-            <IoLogoTwitter className={styles.icon}></IoLogoTwitter>
-          </div>
+            divStyle={`${styles.box} ${styles.responsive}`}
+            iconStyle={styles.icon}
+            Icon={IoLogoTwitter}
+          />
         </div>
         <div className={styles.bars}>
           <span className={styles.bar}></span>

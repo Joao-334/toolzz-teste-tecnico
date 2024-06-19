@@ -1,6 +1,6 @@
 import styles from "./index.module.scss";
 
-import CaptchaImage from "../../../assets/images/captcha.png";
+import CaptchaImage from "../../assets/images/captcha.png";
 
 const Captcha = () => {
   return (

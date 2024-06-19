@@ -1,7 +1,6 @@
 import { useState } from "react";
-import RightSide from "./components/Login/RightSide/Index.tsx";
-import LeftSide from "./components/Login/LeftSide/Index.tsx";
 import { Toaster } from "react-hot-toast";
+import Login from "./components/Login/Index.tsx";
 
 function App() {
   const [isDarkMode, setDarkMode] = useState(false);
@@ -9,8 +8,7 @@ function App() {
   return (
     <div className="start" data-theme={isDarkMode ? "dark" : "light"}>
       <Toaster position="top-right" reverseOrder={false} />
-      <LeftSide setDarkMode={setDarkMode} isDarkMode={isDarkMode} />
-      <RightSide isDarkMode={isDarkMode} />
+      <Login isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
     </div>
   );
 }

@@ -10,7 +10,7 @@ type Props = {
   setAnything: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const Box = ({
+const InputBox = ({
   label,
   type = "text",
   placeholder,
@@ -37,4 +37,4 @@ const Box = ({
   );
 };
 
-export default Box;
+export default InputBox;

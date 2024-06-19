@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import Checkbox from "../../Checkbox/Index";
-import ForgetPassword from "../../Link/ForgetPassword/Index";
+import InputCheckbox from "../Checkbox/Index";
+import ForgetPassword from "../ForgetPassword/Index";
 import styles from "./index.module.scss";
 import { FaArrowRightToBracket } from "react-icons/fa6";
 
@@ -10,7 +10,7 @@ type Props = {
   procedLogin: Function;
 }
 
-const Submit = ({ text = "Entrar", isDarkMode, procedLogin }: Props) => {
+const SubmitButton = ({ text = "Entrar", isDarkMode, procedLogin }: Props) => {
 
   return (
     <>
@@ -18,7 +18,7 @@ const Submit = ({ text = "Entrar", isDarkMode, procedLogin }: Props) => {
         <FaArrowRightToBracket className={styles.icon} />
         <button className={styles.btn__login} onClick={(e) => procedLogin(e)}>{text}</button>
       </div>
-      <Checkbox
+      <InputCheckbox
         checkboxName="holdConnection"
         label="Manter conectado"
         isDarkMode={isDarkMode}
@@ -29,4 +29,4 @@ const Submit = ({ text = "Entrar", isDarkMode, procedLogin }: Props) => {
   );
 };
 
-export default Submit;
+export default SubmitButton;
