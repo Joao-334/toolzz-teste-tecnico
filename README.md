@@ -5,4 +5,4 @@
 
 <h1>Tecnologias Utilizadas:</h1>
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+<img width="30" heigth="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
